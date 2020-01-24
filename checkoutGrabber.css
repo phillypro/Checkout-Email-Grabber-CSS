@@ -343,7 +343,7 @@ height: 340px !important;
 
 
 @media only screen and (min-width: 1022px) {
-.sticky-sidebar-4342096822370 .sidebar_inner {
+.sticky-sidebar .sidebar_inner {
     transform: none !important;
     transform: none !important;
     will-change: auto  !important;	
