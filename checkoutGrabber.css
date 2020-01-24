@@ -340,3 +340,12 @@ height: 340px !important;
 		transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s,  box-shadow 0.4s 0.1s,;
 	}
 }  
+
+
+@media only screen and (min-width: 1022px) {
+.sticky-sidebar-4342096822370 .sidebar_inner {
+    transform: none !important;
+    transform: none !important;
+    will-change: auto  !important;	
+}
+}
