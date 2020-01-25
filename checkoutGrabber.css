@@ -341,6 +341,9 @@ height: 340px !important;
 		-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s,  box-shadow 0.4s 0.1s,;
 		transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s,  box-shadow 0.4s 0.1s,;
 	}
+	body.morph-open header {
+	    transform: translateY(-100%);
+	}
 }  
 
 
