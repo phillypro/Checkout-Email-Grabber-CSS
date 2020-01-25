@@ -93,6 +93,7 @@ padding: 1em;
 	letter-spacing: 1px;
 	font-weight: 800;
     font-size: 20px;
+	    cursor: pointer;
 }
 
 .content-style-form .close {
