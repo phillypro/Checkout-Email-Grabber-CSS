@@ -151,6 +151,7 @@ animation: morph-spin 2s infinite linear;
 
 .morph-content {
 	pointer-events: none;
+	visibility:visible !important;
 }
 
 .morph-button.open .morph-content {
