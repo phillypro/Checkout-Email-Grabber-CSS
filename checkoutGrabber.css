@@ -206,6 +206,7 @@ animation: morph-spin 2s infinite linear;
 .morph-button-fixed .morph-content {
 	width: 300px;
 	height: 80px;
+	max-width: 100%;
 }
 
 .morph-button-fixed > button {
