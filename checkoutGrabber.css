@@ -33,16 +33,44 @@
 .content-style-form .form p {
 	margin: 0 0 5px 0;
 	font-size: 11px;
+  position: relative;
+      display: flex;
+    flex-flow: column;
+}
+
+.content-style-form .form p:nth-child(1) {
+	margin: 0 0 15px 0;
 }
 
 .content-style-form label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 	display: block;
-	padding: 10px 0 0;
 	color: #6f6f6f;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: bold;
-    float: none;
+	font-weight: normal;
+  float: none;
+  
+  box-sizing: border-box;
+  font-size: 11px;
+  line-height: 1;
+  opacity: 0;
+  overflow: hidden;
+  padding: .8em 1em;
+  pointer-events: none;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 0;
+  text-align: left;
+  transform: translateY(3px);
+  transition: all .2s ease-out;
+  user-select: none;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 1;
+}
+
+.content-style-form .field--not-empty label {
+    opacity: 1;
+    transform: none;
 }
 
 .content-style-form .error input[type="text"],.content-style-form .error input[type="text"]:focus  {
@@ -60,21 +88,36 @@ display:block;
 }
 
 .content-style-form input[type="text"] {
-	padding: 10px;
+  font-size: 14px;
+  padding: 15px 10px;
 	width: 100%;
-	border: 2px solid;
-   	border-color: #e0e0e0;
+	border: 1px solid;
+  border-color: #d9d9d9;
 	background: transparent;
-	color: #000000;
+  color: #333333;
+  border-radius: 5px;
 	font-weight: 300;
-    font-size: 24px;
+      margin: 0;
     height: auto;
     line-height: 1.3;
     float: none;
+  transition: all .2s ease-out;
+}
+
+.content-style-form .field--not-empty input[type="text"]  {
+     padding-bottom: 7px;
+    padding-top: 23px;
+  }
+
+.content-style-form input[type="text"]::placeholder {
+   color: #333333;
 }
 
 .content-style-form input[type="text"]:focus {
-  border-color: #6f6f6f;
+ outline: none;
+    border-color: #197bbd;
+    -webkit-box-shadow: 0 0 0 1px #197bbd;
+    box-shadow: 0 0 0 1px #197bbd;
 }
 
 .content-style-form input:focus {
@@ -82,18 +125,18 @@ display:block;
 }
 
 .content-style-form button {
-	display: block;
+    display: block;
     margin-top: 1em;
-padding: 1em;
-	width: 100%;
-	border: none;
-	background: #1D7A15;
-	color: #ffffff;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 800;
-    font-size: 20px;
-	    cursor: pointer;
+    padding: 21px 1em;
+    width: 100%;
+    border: none;
+    color: #ffffff;
+    background-color: #197bbd;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    line-height: 1.3em;
+    font-weight: 500;
 }
 
 .content-style-form .close {
@@ -253,7 +296,7 @@ animation: morph-spin 2s infinite linear;
 	left: 50% !important;
 	margin: -210px 0 0 -170px;
 	width: 340px !important;
-height: 340px !important;
+height: 370px !important;
 	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, box-shadow 0.4s 0.1s;
 	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s, box-shadow 0.4s 0.1s;
    box-shadow: 1px 1px 28px rgba(0, 0, 0, 0.7);
@@ -328,9 +371,11 @@ height: 340px !important;
 	-webkit-transition: none !important;
 	transition: none !important;
 }
+body.morph-open header {
+    filter: brightness(0.5);
+}
 
 /* Media Queries */
-
 @media screen and (max-width: 600px) {
 	.morph-button-modal.open .morph-content {
 		top: 0% !important;
